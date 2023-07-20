@@ -1,8 +1,3 @@
-html, body, button, *{
-	font-family: Arial, "Lucida Grande" !important;
-	}
-
-
 nav{
 	position: fixed;
 	z-index: 10;

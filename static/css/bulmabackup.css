@@ -2469,10 +2469,9 @@ div.icon-text {
 }
 
 .notification.is-danger {
-  background-color: #f9a59a;
+  background-color: #f14668;
   color: #fff;
 }
-
 
 .notification.is-danger.is-light {
   background-color: #feecf0;

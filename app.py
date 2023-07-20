@@ -123,6 +123,11 @@ def home():
 	title = "Home"
 	return render_template("index.html", title=title)
 
+@app.route("/dashboard")
+def dashboard():
+	title = "Dashboard"
+	return render_template("dashboard.html", title=title)
+
 # LISTA DE CONTACTOS
 @app.route("/contacts")
 def contacts():
@@ -227,7 +232,7 @@ def delete(id):
 		return render_template("contacts.html", borrar_registro = borrar_registro)
 	except:
 		db.session.commit()
-		flash("Hubo un error al intentar borrar este registro", "Danger")
+		flash("Hubo un error al intentar borrar este registro", "danger")
 		return render_template("contacts.html", borrar_registro=borrar_registro, id_delete=id_delete)
 	else:
 		return render_template("contacts.html")
