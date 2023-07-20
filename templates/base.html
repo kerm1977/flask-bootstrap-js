@@ -19,9 +19,25 @@
     <nav class="navbar sticky-top bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Flask-Python</a>
+            <a class="navbar-brand" href="{{url_for('contacts')}}">Contactos</a>
+            <a class="navbar-brand" href="{{url_for('registro')}}">Registro</a>
         </div>
     </nav>
 
+    <div class="hideMe">
+    <div class="container container-messages alert_messages ">
+        <!-- Estos son mensajes flashed que vienen desde main.py -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {%if messages %}
+                    {%for category, message in messages%}
+                        <div class="notification notifications is-{{ category }}">
+                            {{ message }}
+                        </div>  
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+    </div>  
+</div>
 
     
     {% block content %}

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+<div class="container contacts">
+<div class="columns ">
+  <div class="column">
+      Cantidad de Personas registradas {{users}}
+  </div>
+</div>	
+
+      
+
+{%for items in values%}
+<div class="card">
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+        <figure class="image is-48x48">
+          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="media-content">
+        <p class="title is-4">{{items.username.title()}} {{items.apellidos.title()}} {{items.apellidos2.title()}}</p>
+        <p class="subtitle is-6">{{items.email}}</p>
+      </div>
+    </div>
+
+    <div class="content">
+       <p>Teléfono: {%if items.telefono%}
+                    {{items.telefono}}
+                    {%else%}
+                    {%endif%}</p>
+        
+        <p>Celular: {%if items.celular%}
+                    {{items.celular}}
+                    {%else%}
+                    {%endif%}</p>
+
+    <footer class="card-footer">
+      <a href="{{url_for('registro')}}" class="card-footer-item">Agregar Usuario</a>
+      <a href="{{url_for('update', id=items.id)}}"class="card-footer-item">Editar Contacto<i hidden>{{items.id}}</i></a>  
+      <a href="{{url_for('delete', id=items.id)}}" class="card-footer-item" onclick="return ConfirmDelete()">Borrar Contacto<i hidden>
+      {{items.id}}</i></a>
+    </footer>      
+ 
+      <!-- <a>@bulmaio</a>.
+      <a href="#">#css</a> <a href="#">#responsive</a>
+      <br>
+      <time datetime="2016-1-1"></time> -->
+    </div>
+  </div>
+</div>
+<hr>
+{%endfor%}
+{% endblock %}

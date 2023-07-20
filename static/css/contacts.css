@@ -1,3 +1,8 @@
+html, body, button, *{
+	font-family: Arial, "Lucida Grande" !important;
+	}
+
+
 .form-signin{
 	font-family: Arial, "Lucida Grande";
 	}
