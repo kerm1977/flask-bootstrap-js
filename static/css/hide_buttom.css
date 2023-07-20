@@ -1,0 +1,33 @@
+.details,
+.show,
+.hide:target {
+  display: none;
+}
+.hide:target + .show,
+.hide:target ~ .details {
+  display: block;
+}
+
+
+
+/*
+<div class="container alert_messages">
+    <!-- Estos son mensajes flashed que vienen desde main.py -->
+        <h1>                  
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {%if messages %}
+                {%for category, message in messages%}
+                <a id="hide1" href="#hide1" class="hide">+ Expand
+                <a id="show1" href="#show1" class="show">- Expand
+                    <div class="notification is-{{ category }}">
+                        <h4>
+                            {{ message }}
+                        </h4>
+                    </div>  
+                </a>
+                </a> 
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        </h1>
+</div>  */

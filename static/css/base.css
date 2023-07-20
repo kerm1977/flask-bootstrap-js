@@ -1,0 +1,71 @@
+html, body, button, *{
+	font-family: Arial, "Lucida Grande";
+	}
+
+html, body{ 
+	box-sizing: border-box; 
+	font-size: 20px;
+	background:#f8f9fa;
+	}
+
+
+.margin_errors{
+	height: 100%;
+	padding-top: 200px;
+	margin-top: 100px;
+}
+
+.margin_main{
+	text-align: justify;
+	margin: 0px 20px 0px 20px;
+	height: 100%;
+	padding-top: 100px;
+	margin-top: 100px;
+}
+
+@media(max-width: 768px){
+	.margin_main{
+		text-align: justify;
+		margin: 0px 20px 0px 20px;
+		height: 100%;
+		padding-top: 100px;
+		margin-top: 100px;
+	}
+}
+
+.container-messages{
+	width: 100%;
+}
+
+/*OCULTAR LOS MENSAJES FLASH */
+	.hideMe {
+	    -moz-animation: cssAnimation 0s ease-in 5s forwards;
+	    /* Firefox */
+	    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+	    /* Safari and Chrome */
+	    -o-animation: cssAnimation 0s ease-in 5s forwards;
+	    /* Opera */
+	    animation: cssAnimation 0s ease-in 5s forwards;
+	    -webkit-animation-fill-mode: forwards;
+	    animation-fill-mode: forwards;
+	}
+	@keyframes cssAnimation {
+	    to {
+	        width:0;
+	        height:0;
+	        overflow:hidden;
+	    }
+	}
+	@-webkit-keyframes cssAnimation {
+	    to {
+	        width:0;
+	        height:0;
+	        visibility:hidden;
+	    }
+	}
+	.notifications{
+		margin: auto;
+		font-size: 20px;
+		text-align: center;
+	}
+

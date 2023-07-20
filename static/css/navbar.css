@@ -1,0 +1,133 @@
+nav{
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 0 5%;
+	height: 100px;
+	background-color: #31475e; /*Color de fondo*/
+}
+
+nav .logo{
+	float: left;
+	width: 40%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	font-weight: bold;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+
+nav .list{
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+}
+
+nav .list li{
+	list-style: none;
+}
+
+nav .list a{
+	display: block;
+	text-transform: uppercase;
+	padding: 15px 25px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;
+	border-radius: 25px;
+}
+
+nav .list a:hover{
+	background-color: #0ba89c;
+}
+
+#toogle {
+	position: absolute;
+	top: -100px;
+}
+
+nav .icon-bars{
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%); 
+}
+
+nav .icon-bars .line{
+	width: 30px;
+	height: 5px;
+	background-color: #ffffff;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out; 
+} 
+
+@media(max-width: 768px){
+	nav .logo{
+		float: none;
+		width: auto;
+		justify-content: center;
+	}
+
+	nav .list{
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: #2a3b51;
+		overflow: hidden;
+		transition: all .2s ease-in-out; /*Velocidad como se depliega el menu*/
+	}
+
+	nav .list a{
+		font-size: 20px;
+	}
+
+	nav :checked ~ .list {
+		bottom: 0;
+	}
+
+	nav .icon-bars{
+		display: block;
+	}
+}
+
+
+.icon_feather_nav_user{
+	width: 32px; 
+	height: 32px;
+}
+
+
+
+
+
+
+
+
+
+/* 
+Referencia 
+-------------------------------------------
+https://www.youtube.com/watch?v=ksVzzWSKVVI 
+*/
